@@ -1,0 +1,26 @@
+<ion-view view-title="{{chef.name}}">
+    <ion-content ng-class="{expanded:isExpanded}" class="animate-fade-slide-in">
+        <div class="curriculum">
+            <ion-list type="list-inset">
+                <div class="item item-divider">Dados do Chef</div> 
+                <ion-item class="item-complex item-avatar">
+                    <div class="item-content">
+                        <img ng-src="{{chef.picture}}" class="avatar">
+                        <h4>Nome:</h4>
+                        <p>{{chef.name}} {{chef.lastname}}</p>
+                    </div>
+                </ion-item>
+                <ion-item class="item-icon-left">
+                    <i class="icon ion-email"></i> 
+                    <h4>Email:</h4>
+                    <p> {{chef.email}}</p> 
+                </ion-item>
+                <ion-item class="item-icon-left">
+                    <i class="icon ion-clipboard"></i> 
+                    <h4>Curriculum:</h4>
+                    <p> {{chef.info_value}}</p> 
+                </ion-item>
+            </ion-list>
+        </div>
+    </ion-content>
+</ion-view>

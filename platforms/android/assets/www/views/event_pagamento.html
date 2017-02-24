@@ -1,0 +1,145 @@
+<div class="card list">
+    <label class="item item-input item-select">
+        <div class="input-label">
+             Pagamento 
+        </div>
+        <select ng-model="formData.pagamento">
+            <option value="boleto">Boleto</option>
+            <option value="creditCard">Cartão de Crédito</option>
+        </select>
+    </label>
+</div>
+
+<section>
+    <div class="list"> 
+        <div class="row">
+            <div class="col-30">
+                <label class="item item-input item-floating-label"> 
+                    <span class="input-label">CEP</span> 
+                    <input type="tel" placeholder="CEP" ng-model="formData.cep" ng-change="completarCep()" mask="99999-999" required> 
+                </label> 
+            </div>
+            <div class="col-offset-10 col-60">
+                <label class="item item-input item-floating-label"> 
+                    <span class="input-label">Bairro</span> 
+                    <input type="text" placeholder="Bairro" ng-model="formData.bairro" required> 
+                </label> 
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-30">
+                <label class="item item-input item-floating-label"> 
+                    <span class="input-label">UF</span> 
+                    <input type="text" placeholder="UF" ng-model="formData.estado" required> 
+                </label>
+            </div>
+            <div class="col-offset-10 col-60">
+                <label class="item item-input item-floating-label"> 
+                    <span class="input-label">Cidade</span> 
+                    <input type="text" placeholder="Cidade" ng-model="formData.cidade" required> 
+                </label> 
+            </div>
+        </div>
+
+        <label class="item item-input item-floating-label"> 
+            <span class="input-label">Endereço</span> 
+            <input type="text" placeholder="Endereço" ng-model="formData.endereco" required> 
+        </label> 
+        <div class="row">
+            <div class="col-30">
+                <label class="item item-input item-floating-label"> 
+                    <span class="input-label">Número</span> 
+                    <input type="tel" placeholder="Número" ng-model="formData.numero"> 
+                </label> 
+            </div>
+            <div class="col-offset-10 col-60">
+                <label class="item item-input item-floating-label"> 
+                    <span class="input-label">Complemento</span> 
+                    <input type="text" placeholder="Complemento" ng-model="formData.complemento"> 
+                </label> 
+            </div>
+        </div>
+
+        <label class="item item-input item-floating-label"> 
+            <span class="input-label">Telefone</span> 
+            <input type="tel" placeholder="Telefone" ng-model="formData.telefone" mask="(99) 99999-9999" required> 
+        </label> 
+        <label class="item item-input item-floating-label" ng-show="formData.pagamento == 'boleto'"> 
+            <span class="input-label">CPF</span> 
+            <input type="tel" placeholder="CPF" ng-model="formData.cpf" mask="999.999.999-99" required> 
+        </label> 
+    </div>
+</section>
+
+<section id="creditCard_section" ng-show="formData.pagamento == 'creditCard'">
+    <div class="card list">
+        <div class="item item-divider">Dados do cartão</div>
+        <div class="row">
+            <div class="col col-60">
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Número do Cartão</span>
+                    <input type="tel" name="cardNumber" placeholder="Número do Cartão" required ng-model="creditCard.cardNumber" />
+                </label>
+            </div>
+            <div class="col col-offset-10">
+                <label class="item item-input item-floating-label">
+                    <span class="input-label" for="cvv">CVV</span>
+                    <input type="text" name="cvv" maxlength="{{cvv_max}}" placeholder="CVV" ng-model="creditCard.cvv" />
+                </label>
+            </div>
+
+        </div>
+
+        <label class="item item-input item-stacked-label">
+            <span class="input-label" for="validade">Validade</span>
+            <input type="month" name="validade" ng-model="creditCard.expires" placeholder="Validade" />
+        </label>
+        <label class="item item-input item-select">
+            <span class="input-label">Parcelas</span>
+            <select id="installmentQuantity" name="installmentQuantity" ng-model="creditCard.installmentQuantity">
+                <option ng-repeat="installment in creditCard.installments" ng-selected="creditCard.installmentQuantity == installment.qty">{{installment.description}}</option>
+            </select>
+        </label>
+    </div>
+
+    <div class="card list">
+        <div class="item item-divider">Dados do titular do cartão</div>
+        <label class="item item-input item-floating-label">
+            <span class="input-label" for="holderName">Nome <small>(como está gravado no Cartão)</small></span>
+            <input type="text" name="creditCardHolderName" ng-model="creditCard.HolderName" placeholder="Nome do titular do Cartão" required />
+        </label>
+        <label class="item item-input item-floating-label">
+            <span class="input-label" for="creditCardHolderCPF">CPF</span>
+            <input type="tel" name="creditCardHolderCPF" ng-model="creditCard.HolderCPF" placeholder="CPF do titular do Cartão" required mask="999.999.999-99" />
+        </label>
+
+        <label class="item item-input item-stacked-label">
+            <span class="control-label" for="creditCardHolderBirthDate">Data de Nascimento</span>
+            <input type="date" name="creditCardHolderBirthDate" placeholder="Data de Nascimento do titular do cartão" required ng-model="creditCard.HolderBirthDate" />
+        </label>
+
+        <div class="row">
+            <label class="item item-input item-stacked-label">
+                <span class="control-label">Telefone</span>
+            </label>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">DDD</span>
+                    <input type="tel" name="creditCardHolderAreaCode" placeholder="DDD" required maxlength="2" mask="99" ng-model="creditCard.HolderAreaCode" />
+                </label>
+            </div>
+            <div class="col-75">
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Número do Telefone</span>
+                    <input type="tel" name="creditCardHolderPhone" placeholder="Número do Telefone" required maxlength="9" ng-mask="99999999" ng-model="creditCard.HolderPhone" />
+                </label>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="padding-horizontal">
+    <button class="button button-block button-balanced" ng-click="finalizarCompra()">Efetuar Pagamento</button>
+</div>
+

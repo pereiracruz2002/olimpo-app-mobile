@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/var/www/amigo-chef-mobile/platforms/android/build/intermediates/res/merged/debug/color/common_google_signin_btn_text_light.xml",
+        "source": "/var/www/amigo-chef-mobile/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.0.0/res/color/common_google_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "/var/www/amigo-chef-mobile/platforms/android/build/intermediates/res/merged/debug/color/com_facebook_send_button_text_color.xml",
+        "source": "/var/www/amigo-chef-mobile/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/color/com_facebook_send_button_text_color.xml"
+    },
+    {
+        "merged": "/var/www/amigo-chef-mobile/platforms/android/build/intermediates/res/merged/debug/color/com_facebook_button_text_color.xml",
+        "source": "/var/www/amigo-chef-mobile/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/res/color/com_facebook_button_text_color.xml"
+    },
+    {
+        "merged": "/var/www/amigo-chef-mobile/platforms/android/build/intermediates/res/merged/debug/color/common_google_signin_btn_text_dark.xml",
+        "source": "/var/www/amigo-chef-mobile/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.0.0/res/color/common_google_signin_btn_text_dark.xml"
+    }
+]

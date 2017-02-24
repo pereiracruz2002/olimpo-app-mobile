@@ -1,0 +1,39 @@
+<div class="list">
+    <label class="item item-input item-floating-label"> 
+        <span class="input-label">Cupom de Desconto</span> 
+        <input type="text" placeholder="Cupom de Desconto" ng-model="formData.cupom" ng-blur="validarCupom()"> 
+    </label> 
+    <div class="row padding-horizontal">
+        <span class="col input-label">Vagas disponíveis:</span> 
+        <div class="col text-right">
+            {{evento.total_invites}}
+        </div> 
+    </div> 
+
+    <label class="item item-input item-select">
+        <div class="input-label">
+           Número de Convidados 
+        </div>
+        <select ng-model="formData.qty">
+            <option ng-repeat="qty_invite in vm.invite_limits" value="{{qty_invite}}" ng-selected="qty_invite == formData.qty">{{qty_invite}}</option>
+        </select>
+    </label>
+    <div class="row padding-horizontal">
+        <span class="col input-label">Valor por Pessoa:</span>
+        <div class="col text-right">
+            R${{evento.price}}
+        </div>
+    </div>
+
+    <div class="row padding-horizontal">
+        <span class="col input-label">Total:</span> 
+        <div class="col text-right">
+            R${{vm.valor_total}}
+        </div> 
+    </div> 
+
+</div> 
+<div class="padding-horizontal">
+    <button class="button button-block button-balanced" ng-disabled="!formData.qty" ng-click="vm.step = 2">Reservar</button>
+</div>
+

@@ -1,0 +1,17 @@
+<ion-view view-title="Eventos">
+    <ion-content ng-class="{expanded:isExpanded}" class="animate-fade-slide-in">
+        <div class="padding text-center text-white" ng-show="loading">
+            <p><ion-spinner></ion-spinner></p>
+        </div>
+        
+        <div ng-repeat="evento in lista_eventos" ui-sref="app.events({ event_type_id: evento.event_type_id })" class="row row-bottom list-category" style="background-image: url('{{evento.img}}'); ">
+            <div class="bg-gradient row row-bottom">
+                <h2 class="col">{{evento.plural}}</h2>
+                <p class="padding-horizontal">{{evento.descricao}}</p>
+            </div>
+        </div>
+    </ion-content>
+    <div ng-controller="RegisterChefCtrl">
+        <button id="fab-event" ng-click="openModal()" class="button button-fab button-fab-bottom-right expanded button-positive drop"><i class="icon ion-plus"></i></button>
+    </div>
+</ion-view>

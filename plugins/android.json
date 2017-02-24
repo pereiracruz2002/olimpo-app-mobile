@@ -1,0 +1,46 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "br.com.amigochef.app"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "br.com.amigochef.app"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "br.com.amigochef.app"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "br.com.amigochef.app"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "br.com.amigochef.app"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "br.com.amigochef.app"
+        },
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "br.com.amigochef.app"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "br.com.amigochef.app"
+        },
+        "onesignal-cordova-plugin": {
+            "PACKAGE_NAME": "br.com.amigochef.app"
+        },
+        "cordova-plugin-datepicker": {
+            "PACKAGE_NAME": "br.com.amigochef.app"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "br.com.amigochef.app"
+        }
+    }
+}

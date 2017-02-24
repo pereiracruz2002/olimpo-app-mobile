@@ -1,0 +1,48 @@
+<ion-view view-title="Eventos - Chef {{chef.name}}">
+ 
+
+    <ion-nav-bar class="bar-dark">
+        <ion-nav-buttons>
+            <a class="button back-button buttons button-clear header-item button-back-custom" ui-sref="tab.events_chef()" nav-direction="back"><i class="icon ion-{{platform}}-arrow-back"></i></a>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+
+    <ion-content>
+        <div class="col-80 col-offset-10">
+            <div class="chef_events-header">
+                <h5>Chef: {{chef_name}}</h5>
+                <div class="img-chef">
+                    <img ng-src="{{chef_picture}}">
+                </div>
+            </div>
+
+            <p class="positive text-center">Confira abaixo os eventos os quais você foi convidado pelo seu amigo-chef!</p>
+
+            <ion-list class="lista_eventos">
+                <ion-item ng-repeat="evento in eventos" ui-sref="detalhe_evento({event_id: evento.event_id})" nav-direction="forward" repeat-end="ajustImgHeight()">
+                    <div class="row">
+                        <div class="col-33">
+                            <img ng-src="{{evento.picture}}" class="full-image listItemEventsChef" height="{{heightImg}}">
+                            <div class="row vagas">
+                                <div class="col">
+                                    <span class="icon-chair"></span> {{evento.num_users}}
+                                </div>
+                                <div class="col">
+                                    <span class="icon ion-ios-people balanced"></span> {{evento.users_confirmed}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-66">
+                            <h4>{{evento.name}}</h4>
+                            <div class="col">
+                                <p>Data: {{evento.start | data_extenso}}</p>
+                                <p>Local: {{evento.city}}, {{evento.state}}</p>
+                                <p><strong>R$ {{evento.price | formatar_preco}} por pessoa</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </ion-item>
+            </ion-list>    
+        </div>
+    </ion-content> 
+</ion-view>

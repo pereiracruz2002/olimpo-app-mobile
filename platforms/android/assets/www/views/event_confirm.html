@@ -1,0 +1,29 @@
+<ion-modal-view>
+    <ion-header-bar class="bar-positive bar-header-center" align-title="center">
+        <button ng-show="vm.step==2" class="button button-icon button-clear ion-ios-arrow-left" ng-click="vm.step =1"></button>
+        <button class="button button-icon button-clear ion-ios-close-empty pull-right" ng-click="closeModal()"></button>
+        <h1 class="title">Confirme sua presença</h1>
+    </ion-header-bar>
+    <ion-content class="padding">
+		<div class="item" ng-show="sucesso_msg" ng-bind-html="sucesso_msg | trustAsHTML"></div>
+
+        <p class="text-center" ng-show="loading"><ion-spinner></ion-spinner></p>
+        <div class="card" ng-show="erro_msg">
+            <div class="item item-divider">
+                Corrija os campos abaixo
+            </div>
+            <div class="item item-text-wrap assertive">
+                <ul ng-bind-html="erro_msg | trustAsHTML"></ul>
+            </div>
+        </div>
+
+        <div class="wrapper" ng-hide="loading || sucesso_msg != ''">
+            <div ng-show="vm.step == 1">
+                <div ng-include="'views/event_cart.html'"></div>
+            </div>
+            <div ng-show="vm.step == 2">
+                <div ng-include="'views/event_pagamento.html'"></div>
+            </div>
+        </div>
+    </ion-content>
+</ion-modal-view>

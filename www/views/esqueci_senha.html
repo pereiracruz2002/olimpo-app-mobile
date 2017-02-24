@@ -1,0 +1,25 @@
+<ion-view view-title="Esqueci a senha">
+    <ion-nav-bar class="bar-assertive">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+    </ion-nav-bar>
+
+    <ion-content class="dark-bg light padding-vertical login">
+        <div class="col-80 col-offset-10">
+            <div class="padding-vertical">
+                <h4 class="light">Para recuperar sua senha digite seu email utilizado no cadastro.</h4>
+            </div>
+            <form name="preRegisterForm" ng-submit="esqueciSenha()">
+                <div class="list">
+                    <label class="item item-input item-floating-label">
+                      <span class="input-label">Email</span>
+                      <input type="text" placeholder="Digite seu email" ng-model="formData.email" name="email" required>
+                    </label>
+                    <button class="button button-block button-assertive" ng-disabled="preRegisterForm.$invalid">OK</button>
+                </div>
+               
+            </form>
+        </div>
+
+    </ion-content>
+</ion-view>

@@ -1,0 +1,41 @@
+<ion-view view-title="{{titulo}} em {{local}}">
+    <ion-nav-bar class="bar-events-public">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+    </ion-nav-bar>
+   
+    <ion-content>
+        
+        <div id="tabs-event-public">
+            <div class="tabs tabs-icon-only tabs-evento">
+                <a class="tab-item" href="" ng-click="myModel.tab=1" ng-class="myModel.tab==1 ? 'assertive active' : ''">Lista</a>
+                <a class="tab-item" href="" ng-click="myModel.tab=2" ng-class="myModel.tab==2 ? 'assertive active' : ''">Mapas</i></a>
+            </div>
+        </div>
+        <div ng-show="myModel.tab==1" id="lista">
+            <ion-list class="lista_eventos_publicos">
+                <ion-item ng-repeat="evento in eventos"  ui-sref="tab.detalhe_evento_public({event_id: evento.event_id})" nav-direction="forward">
+                   <div class="row">
+                        <div class="col-40">
+                            <img ng-src="{{evento.picture}}" class="full-image">
+                        </div>
+                        <div class="col-50 col-offset-10">
+                            <h4>{{evento.name}}</h4>
+                            <div class="col">
+                                <p>{{evento.start}} - {{evento.end}}</p>
+                                <p>{{evento.neighborhood}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </ion-item>
+            </ion-list>
+        </div>
+        <div ng-show="myModel.tab==2" id="mapa">
+            <div class="col-80 col-offset-10">
+                <ion-content>
+                    <div id="map" data-tap-disabled="true"></div>
+                </ion-content>
+            </div>
+        </div>    
+    </ion-content>
+</ion-view>

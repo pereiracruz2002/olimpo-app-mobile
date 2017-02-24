@@ -1,0 +1,143 @@
+<ion-view view-title="Confirmar sua presença">
+    <ion-nav-bar class="bar-dark">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+    </ion-nav-bar>
+
+    <ion-content class="stable-bg">
+        <div ng-show="myModel.step==1">
+            <div class="header-pagamento">
+                <div class="row">
+                    <div class="col">
+                        <div class="col-50 col-offset-33 position-relative">
+                            <div class="avatar img">
+                                <img ng-src="{{evento.owner_picture}}" height="75" width="75" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="col-50 col-offset-10 position-relative">
+                            <div class="img">
+                                <img src="img/logo.png" height="75" width="75" class="logo-d4f" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="item">
+                        <p class="assertive">{{evento.name}} <strong>{{evento.start | data_extenso}}</strong></p>
+                        <p><strong>Chef: {{evento.owner_name}}</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="col-offset-10">
+                        <i class="icon-chair"></i> Vagas Disponíveis:
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="col-80 text-right">
+                        <strong>{{evento.total_invites}}</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card participantes">
+                <div class="item item-text-wrap">
+                    <h3><strong>Número de participantes:</strong></h3> 
+
+                    <div class="row">
+                        <div class="col">
+                            Você (1)
+                        </div>
+                        <div class="col text-center">+</div>
+                        <div class="col">
+                            <select ng-model="formData.qty">
+                                <option value="0" selected>0</option>
+                                <option ng-repeat="convidados in invite_limits" value="{{convidados}}">{{convidados}}</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <em>Você pode adicionar acompanhantes</em>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item item-text-wrap">
+                    <p><strong>Valor por pessoa: R${{evento.price | formatar_preco}}</strong></p>
+                </div>
+                    <div class="item">
+                    <p>Taxa: R${{formData.tax | formatar_preco}}</p>
+                </div>
+
+                <label class="item item-input">
+                    <span class="input-label">Cupom de desconto:</span>
+                    <input type="text" ng-model="formData.cupom">
+                </label>
+                <div class="item" ng-show="formData.desconto">
+                    <p><strong>Desconto: R${formData.desconto | formatar_preco}}</strong></p>
+                </div>
+
+
+                <div class="item">
+                    <p class="button button-dark">
+                        Valor total: R$ {{valor_total}}
+                    </p>
+                </div>
+
+                <div class="text-center">
+                    <p><button class="button button-balanced" ng-click="confirmarReserva()">Confirmar Reserva</button></p>
+                </div>
+            </div> <!--/participantes-->
+        </div> <!--/step-1-->
+
+        <div ng-show="myModel.step == 2" class="cadastro-acompanhantes">
+            <h4 class="text-center"><strong>Cadastro dos acompanhantes</strong></h4>
+
+            <div class="card">
+                <p class="item item-divider stable-bg"><strong>Número de participantes:</strong></p>
+                <div class="row">
+                    <div class="col">
+                        Você (1)
+                    </div>
+                    <div class="col text-center">+</div>
+                    <div class="col">
+                        <strong>{{formData.qty}}</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card acompanhantes-dados">
+                <div class="item item-divider stable-bg"><strong>Coloque o nome do seu acompanhante</strong></div>
+                <div class="row row-center" ng-repeat="(key, acompanhante) in formData.acompanhantes">
+                    <div class="col col-10 text-center">{{key}}</div>
+                    <div class="col form-col">
+                        <label class="item item-input">
+                            <span class="input-label">Nome:</span>
+                            <input type="text" ng-model="formData.acompanhantes[key].name" required>
+                        </label>
+                        <label class="item item-input">
+                            <span class="input-label">Sobrenome:</span>
+                            <input type="text" ng-model="formData.acompanhantes[key].lastname" required>
+                        </label>
+                        <label class="item item-input">
+                            <span class="input-label">Email:</span>
+                            <input type="email" ng-model="formData.acompanhantes[key].email" required>
+                        </label>
+
+                    </div>
+                </div>
+            </div> <!--/acompanhantes-dados-->
+
+            <div class="item stable-bg item-text-wrap">
+                <p>O pagamento será confirmado após a apovação do seu amigo-chef.</p>
+            </div>
+            <div class="text-center">
+                <p><button class="button button-balanced" ng-click="efetuarPagamento()">Efetuar Pagamento</button></p>
+            </div>
+
+        </div> <!--/step-2-->
+    </ion-content>
+</ion-view>

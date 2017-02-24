@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/var/www/amigo-chef-mobile/platforms/android/build/intermediates/exploded-aar/com.onesignal/OneSignal/3.4.1/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="c05a731f2fc63097365d844e4467575a424e56b1">
+        <dex dex="/var/www/amigo-chef-mobile/platforms/android/build/intermediates/pre-dexed/debug/com.onesignal-OneSignal-3.4.1_e4fb9d7af9982601180a15ae7688c3554c7ce18f.jar" />
+    </item>
+    <item
+        jar="/var/www/amigo-chef-mobile/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics-impl/10.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="ddfa80ca49f1334afea1f9aa93148be73f73cd0f">
+        <dex dex="/var/www/amigo-chef-mobile/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-analytics-impl-10.0.0_e85604b03212574aa21e84a114d3e9a270a28049.jar" />
+    </item>
+    <item
+        jar="/home/flavio/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-applinks/1.4.0/8ad21bf21784dacce5f2043afb97218cc377e835/bolts-applinks-1.4.0.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="8ad21bf21784dacce5f2043afb97218cc377e835">
+        <dex dex="/var/www/amigo-chef-mobile/platforms/android/build/intermediates/pre-dexed/debug/bolts-applinks-1.4.0_64c21e0bb581ec5f87d741ed27ae60067fcbb297.jar" />
+    </item>
+    <item
+        jar="/home/flavio/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/24.0.0/support-annotations-24.0.0.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="2943c74db6d4346ab8c6531adac91fa05c137c40">
+        <dex dex="/var/www/amigo-chef-mobile/platforms/android/build/intermediates/pre-dexed/debug/support-annotations-24.0.0_5533e5d0fbe2a05945a39caec0e66d882c2fd157.jar" />
+    </item>
+    <item
+        jar="/var/www/amigo-chef-mobile/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager-v4-impl/10.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="3660967212b89195e628670db181ed86e3307569">
+        <dex dex="/var/www/amigo-chef-mobile/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tagmanager-v4-impl-10.0.0_289c2f7ca6865796c22d2b9e84b538627191ee16.jar" />
+    </item>
+    <item
+        jar="/var/www/amigo-chef-mobile/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/10.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="985be85104f6d0c5c5e51e7b7e60d8883a98ac64">
+        <dex dex="/var/www/amigo-chef-mobile/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tasks-10.0.0_92db29bbab0b3436bfb4667e012ca70025e10912.jar" />
+    </item>
+    <item
+        jar="/var/www/amigo-chef-mobile/platforms/android/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="2f7e6e2dad1bccaf68a8820820adc6c0d5b96d37">
+        <dex dex="/var/www/amigo-chef-mobile/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-support-v4-24.0.0_23db22afd16c4fa58ac1b8539e09a06d923aa637.jar" />
+    </item>
+    <item
+        jar="/var/www/amigo-chef-mobile/platforms/android/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="d9ecde39b460470e655de6e47c05573d2d5a8bfb">
+        <dex dex="/var/www/amigo-chef-mobile/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-23.4.0_5aa4dc41c740eb80da046be3c5bf1c1023545e51.jar" />
+    </item>
+    <item
+        jar="/var/www/amigo-chef-mobile/platforms/android/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.14.1/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="42a3ae86dd3ae2876d3e95c2e6e104ae57a50a65">
+        <dex dex="/var/www/amigo-chef-mobile/platforms/android/build/intermediates/pre-dexed/debug/com.facebook.android-facebook-android-sdk-4.14.1_bafc3cc077401e39a17b92e507ec29c92715303e.jar" />
+    </item>
+    <item
+        jar="/var/www/amigo-chef-mobile/platforms/android/build/intermediates/exploded-aar/com.android.support/customtabs/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="2d1eaa9e0b98f8fc4c2b989d9b30d4f1480648ac">
+        <dex dex="/var/www/amigo-chef-mobile/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-customtabs-23.4.0_a5beec8ad2462d0f46e2908b95198c1902b0d281.jar" />
+    </item>
+    <item
+        jar="/var/www/amigo-chef-mobile/platforms/android/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/jars/libs/internal_impl-24.0.0.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="fcaf463e10e69c1923ccf1edeba3b4196d239e00">
+        <dex dex="/var/www/amigo-chef-mobile/platforms/android/build/intermediates/pre-dexed/debug/internal_impl-24.0.0_b92ea7c47fdf7c8088d75017b909b946c51ee483.jar" />
+    </item>
+    <item
+        jar="/var/www/amigo-chef-mobile/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/10.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="932350448ea536c5dfbc45697951f31d34e50f1f">
+        <dex dex="/var/www/amigo-chef-mobile/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-location-10.0.0_3a1fbf72098536d584d28615d21c6998fc278723.jar" />
+    </item>
+    <item
+        jar="/var/www/amigo-chef-mobile/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/10.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="741f550aea73f64507fc60a799fefd5a2ea2bef5">
+        <dex dex="/var/www/amigo-chef-mobile/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-analytics-10.0.0_18b1a606c128b867b3441ad08aa074ee762d088e.jar" />
+    </item>
+    <item
+        jar="/var/www/amigo-chef-mobile/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-iid/10.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="147c3e6b95aa3d1e83705b056777ef865d272969">
+        <dex dex="/var/www/amigo-chef-mobile/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-iid-10.0.0_12623e0519e9721a9c9c1794b8eb0efa51c9451c.jar" />
+    </item>
+    <item
+        jar="/var/www/amigo-chef-mobile/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/10.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="0e2bf5e85132c8bfed05a87b71352918815e0205">
+        <dex dex="/var/www/amigo-chef-mobile/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-gcm-10.0.0_c3beb1f47dc6fd759fb6d8abc458107022b32f3b.jar" />
+    </item>
+    <item
+        jar="/home/flavio/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/var/www/amigo-chef-mobile/platforms/android/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_6c75e650fdd8a8eb8723a9e3149f9b5a887ef4fa.jar" />
+    </item>
+    <item
+        jar="/var/www/amigo-chef-mobile/platforms/android/build/intermediates/exploded-aar/android/CordovaLib/unspecified/debug/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="46122897a290f6d4e9861456f09d3601a7c9cef2">
+        <dex dex="/var/www/amigo-chef-mobile/platforms/android/build/intermediates/pre-dexed/debug/CordovaLib-unspecified-debug_13899b78cd5ab2414c35d719a90039b0c05a5d03.jar" />
+    </item>
+    <item
+        jar="/var/www/amigo-chef-mobile/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="3347c3e7056fabc88bdbd8fdae65ddf2b674d977">
+        <dex dex="/var/www/amigo-chef-mobile/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-10.0.0_67be2fad0dc1412baef496eb4aa89ae0047725a2.jar" />
+    </item>
+    <item
+        jar="/var/www/amigo-chef-mobile/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/10.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="75dbc3537bc912d077b3db2f5ac72d5b43644b2c">
+        <dex dex="/var/www/amigo-chef-mobile/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-10.0.0_d663af2a244035a2fa51180c7ef18161a60db52b.jar" />
+    </item>
+
+</items>

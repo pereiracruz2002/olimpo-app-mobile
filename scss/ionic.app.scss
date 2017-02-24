@@ -1,0 +1,655 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+$assertive: #c11652;
+$dark: #343740;
+$positive: #c62353;
+$stable: #dcdfe6;
+$royal: #852f70;
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+
+.scroll-content{ overflow-y: auto; }
+textarea{
+    width:100%;
+    resize:none; 
+}
+ion-tabs.tabs-striped.tabs-color-active-stable .tab-item.tab-item-active{
+    background-color:#dedede;
+}
+.button{
+    border-radius:0 !important;
+}
+.placeholder{
+    color:#969baa;
+    font-size:90%;
+}
+
+.text-center{
+    text-align:center;
+}
+.assertive-bg{
+    color:#fff;
+}
+.assertive-bg h4{
+    color:#fff;
+}
+
+.popup-head{
+    border:none;
+}
+.popup-container .popup{
+    background:#343740;
+    color:#fff;
+}
+.popup-container .popup .popup-title{
+    color:#fff;
+}
+
+.login .item{
+    border:none;
+    text-align:left;
+    padding-left:0;
+    background:none;
+}
+.login input{
+    background:#eee;
+    padding:15px;
+    height:auto;
+}
+.login .input-label{
+    color:#fff;
+}
+.select-picture{
+    background: #c21652;
+    padding: 17px 0;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 35px;
+    height: 75px;
+    width: 80px;
+    margin:15px auto;
+}
+.register label{
+    border:none;
+}
+.minha_conta .register .list-inset{
+    border-bottom: 2px solid #eee;
+    margin:0;
+    padding:10px;
+}
+.checkbox input:checked:before, .checkbox input:checked + .checkbox-icon:before{
+    background:#c11652;
+    border-color:#c11f58;
+}
+
+.tab-item .icon.icon-chef,
+.tab-item .icon.icon-chef-active{
+    height:48px;
+    position:relative;
+}
+.tab-item .icon.icon-chef-active{
+    background:#dedede;
+}
+.tab-item .icon.icon-chef:after,
+.tab-item .icon.icon-chef-active:after{
+    background:url('../img/chapeu.png') no-repeat;
+    background-size:cover;
+    height:28px;
+    width:28px;
+    content:"";
+    display:block;
+    position:absolute;
+    left:50%;
+    margin-left:-14px;
+    top:50%;
+    margin-top:-14px;
+}
+
+/*friends*/
+.friends-header .item,
+.friends-header{
+    background:#808285;
+    color:#fff;
+    border:none;
+}
+.friends-header .item p,
+.friends-header h5{ 
+    color:#fff;
+}
+.friends-header h5{ 
+    margin-bottom:0;
+}
+.add_friend{
+    position:absolute;
+    right:10px;
+    bottom:-20px;
+    color:#fff;
+}
+.friends .item{
+    border:none;
+}
+.friends h2{
+    margin-top:10px;
+}
+.friends .isChef{
+    position:absolute;
+    left:45px;
+    top:25px;
+}
+
+/*events_chef*/
+.events_chef-header .item-input-inset,
+.events_chef-header{
+    background:#808285;
+    color:#fff;
+    border:none;
+}
+.events_chef-header h5{
+    color:#fff;
+}
+.subheader h4{
+    position:relative;
+}
+.subheader h4:before{
+    content:"";
+    background:url('../img/chapeu.png') no-repeat;
+    background-size:cover;
+    height:32px;
+    width:32px;
+    display:block;
+    position:absolute;
+    left:-25px;
+}
+
+.list-category .item-avatar{
+    border-top-left-radius:50px;
+    border-bottom-left-radius:50px;
+    padding-top:0;
+    padding-bottom:0;
+    padding-left:76px;
+    padding-right:0;
+    min-height:76px;
+    background:#dcdfe6;
+    position:relative;
+    margin-bottom:16px;
+}
+.list-category .item-avatar .item-content{
+    padding:0;
+    min-height:76px;
+    position:absolute;
+    left:0;
+    width:100%;
+    background:#dcdfe6;
+    z-index:1;
+}
+.list-category .item-avatar .item-content > img:first-child,
+.list-category .item-avatar img{
+    border-radius:50%;
+    border:4px solid #c11652;
+    max-height:75px;
+    width:75px;
+    height:75px;
+    max-width:75px;
+    top:0;
+    left:0;
+    background:#fff;
+}
+.list-category .item-avatar h2{
+    background:#c11652;
+    color:#fff;
+    padding:5px 10px 10px 86px;
+    font-size:16px;
+}
+.list-category .item-avatar .item-content:after{
+    content:"";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 75px 75px;
+    border-color: transparent transparent #ffffff transparent;
+    position:absolute;
+    right:0;
+    bottom:0;
+    z-index:2;
+    -webkit-transform:rotate(360deg);
+}
+.list-category .item-avatar .total_eventos{
+    position:absolute;
+    right:2px;
+    text-align:right;
+    bottom:0;
+    overflow:visible;
+    z-index:10;
+    font-size:13px;
+}
+.list-category .item-avatar .total_eventos span{
+    display:block;
+    font-size:32px;
+    z-index:30;
+    font-weight:bold;
+    padding:5px 0;
+}
+.list-category .item-avatar .info{
+    font-size:26px;
+    margin:5px 15px 5px 86px;
+}
+
+
+/* Lista de eventos públicos */
+
+.bar-events-public{
+    background-color:#004d99;
+}
+
+
+.list-category-events-public{
+    margin-top:20px;
+}
+
+
+.list-category-events-public .item-avatar h2{
+    background:#4d4d4d;
+    color:#fff;
+    padding:5px 10px 10px 86px;
+    font-size:13px;
+}
+
+.list-category-events-public .item-avatar .item-content > img:first-child, 
+.list-category-events-public .item-avatar img{
+   background: #0059b3;
+   border: 4px solid #4d4d4d;
+}
+
+.list-category-events-public .item-avatar .total_eventos span{
+    font-size: 27px;
+}
+
+.list-category-events-public .list{
+    margin-top:20px;
+}
+
+
+#tabs-event-public .tabs-evento a{
+    color:#000;
+}
+
+#tabs-event-public .tabs-evento a.active{
+    color:#fff;
+    background-color:#0059b3;
+}
+
+
+/*Lista de locais de eventos publicos*/
+
+.lista_eventos_publicos h4{
+    font-weight:bold;
+    padding-top:30px;
+}
+
+.lista_eventos_publicos .item {
+    border:none;
+}
+
+
+/*Lista de eventos do chef*/
+.chef_events-header.texto{
+    position:relative;
+    margin:10px 0;
+    font-size: 15px;
+    
+}
+
+.text_footer{
+    line-height: 30px;
+}
+
+
+.chef_events-header .img-chef{
+    overflow:hidden;
+    height:84px;
+    width:84px;
+    border:4px solid #dcdfe6;
+    border-radius:50%;
+    padding:3px;
+    position:relative;
+    background:#fff;
+}
+.chef_events-header .img-chef img{
+    height:70px;
+    width:70px;
+    border-radius:50%;
+}
+
+.chef_events-header h5 {
+  border: 4px solid #dcdfe6;
+  position: absolute;
+  top: 0;
+  left: 98px;
+  padding: 5px;
+  padding-left: 20px;
+  width: 65%;
+  color: #828487; }
+.lista_eventos {
+    border:none;
+}
+.lista_eventos .item-complex{
+    margin-bottom:16px;
+}
+
+.lista_eventos .item-content{
+    padding:0;
+    position:relative;
+}
+.lista_eventos .item-content:after{
+    content:"";
+    display:block;
+    position:absolute;
+    right:0;
+    top:0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 70px 70px 0;
+    border-color: transparent #be2656 transparent transparent;
+}
+.lista_eventos .row{
+    padding:0;
+}
+.lista_eventos h4{
+    background:#dcdfe6;
+    padding:5px;
+    font-size:14px;
+    font-weight:bold;
+}
+.lista_eventos img{
+    margin-top:0;
+}
+.icon-chair{
+    position:relative;
+    width: 18px;
+    height:18px;
+    background:url('../img/cadeira.png') no-repeat ;
+    background-size:cover;
+    display:inline-block;
+    margin-top:-3px;
+}
+.vagas span{
+    vertical-align:middle;
+}
+.vagas .icon{
+    font-size:24px;
+}
+/*Detalhes evento*/
+.slider{
+    height:150px;
+}
+.event-header{
+    position:relative;
+}
+.event-header .button{
+    position:absolute;
+    bottom:-16px;
+    z-index:100;
+    right:-16px;
+    border:4px solid #fff;
+}
+.tabs-evento{
+    position:relative;
+    bottom:initial;
+    top:initial;
+}
+.icon.fa{
+    font-size:150%;
+}
+.tab-item.active{
+    background:#fff;
+}
+.dl-horizontal dt{
+    float: left;
+    overflow: hidden;
+    clear: left;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-right:5px;
+    margin-bottom:10px;
+}
+.dl-horizontal dd {
+    margin-left: 18px;
+    margin-bottom:10px;
+}
+.dl-horizontal dd:before {
+    display:table;
+    content: " ";
+}
+.dl-horizontal dd:after{
+    clear:both;
+}
+.button-back-custom{
+    margin-top:-2px;
+}
+#convidados .item-avatar{
+    line-height: 40px;
+    border:none;
+}
+#convidados .item-avatar img{
+    border-radius:50%;
+}
+
+#comentarios h2{
+    color: #6d6e71;
+    font-weight:bold;
+}
+#comentarios h2 small{
+    font-size:13px;
+}
+#comentarios .item-avatar{
+    border:none;
+}
+
+#comentarios .card{
+    box-shadow:none;
+}
+.button-circle{
+    border-radius:50%;
+}
+
+/*Confirmação de presença*/
+.position-relative{
+    position:relative;
+}
+.header-pagamento .avatar{
+    background:#fff;
+    border-radius:50%;
+    width:83px;
+    height:83px;
+    border:4px solid #dcdfe6;
+}
+.header-pagamento .img{
+   position:absolute; 
+   z-index:3;
+}
+.header-pagamento .logo-d4f{
+    margin:4px;
+}
+
+.header-pagamento .card{
+    margin-top:40px;
+    padding-top:40px;
+}
+
+.participantes select{
+    background:#fff;
+    padding:5px;
+    border:none;
+}
+.participantes em{
+    font-size:14px;
+    font-style:italic;
+}
+.participantes .item{
+    border:none;
+}
+.participantes .input-label{
+    color:#999;
+} 
+.cadastro-acompanhantes .card{
+    box-shadow:none;
+}
+.acompanhantes-dados.card{
+    background:#dcdfe6;
+}
+.acompanhantes-dados .row{
+    padding:0;
+    background:#fff;
+    margin-bottom:20px;
+}
+.acompanhantes-dados .col{
+    border:none;
+}
+.acompanhantes-dados .form-col{
+    border:2px solid #dcdfe6;
+    margin:-1px 0;
+    padding:0;
+}
+
+ #lista_servico{
+  border-style: none;
+ }
+
+.home .item {
+  border-color: #ddd;
+  background-color: #fff;
+  color: #444;
+  position: relative;
+  z-index: 2;
+  display: block;
+  margin: -1px;
+  border-width: 0 0 3px 0;
+  border-style: solid;
+  padding: 15px;  
+  }
+
+  #pergunta_frequente{
+  border: none;
+  }
+
+.full-image{
+    margin-top: 10px;
+}
+
+.home .item-complex .item-content,
+.item-radio .item-content {
+  position: relative;
+  z-index: 2;
+  padding: 16px 16px 16px 16px;
+  border: none;
+  background-color: #fff;
+}
+
+#camera{
+    margin-left: 30px;
+    margin-top: 40px;
+}
+
+#escolha_foto{
+    margin-left: 13px;
+}
+
+.register label.borda{
+    border-bottom: 2px solid #b2b2b2;        
+}
+
+.burguer{
+    height: 50px;
+    width: 100px;    
+}
+
+.eventsss{
+    background: #004d99; 
+}
+
+.row_header{
+    padding-bottom: 50px;
+}
+.detalhes_header{
+    font-size: 16px;
+    margin: 15px 0 0px;    
+}
+.detalhes_footer{
+    font-size: 16px;
+    margin: 15px 0 0px;
+    color: #fff;    
+}
+
+.row_bottom{
+    background-color: #004d99;
+    padding-bottom: 100px;    
+}
+
+.badge.badge-assertive{
+    background-color: #004d99;
+}
+
+.badge.badge-assertive.ativo {
+    background-color: #818286;
+    color: #fff;    
+}
+
+.lista_destaque {
+    border: none;
+    background-color: #004d99;   
+
+}
+
+.lista_destaque .badge{
+     right: 263px;
+}
+.texto_destaque{
+    margin-left: 25px;
+}
+
+.events_public_header{
+  background-color: #004d99;
+  margin-bottom: 0; 
+}
+
+.events_public_header .item {
+  background-color: #004d99;}
+
+.events_public_header .item-input-wrapper{
+    background-color: #004d99;
+    color:#fff;
+ } 
+
+ .events_public_header .item-input-wrapper input[type=text]{
+    color:#fff;
+ }
+
+.bar-events-public .header-item { 
+    color:#fff;
+}
+
+.eventos_publicos .item{
+    text-align:center;
+    border:none;
+}
+

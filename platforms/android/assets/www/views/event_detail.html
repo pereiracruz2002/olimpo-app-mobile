@@ -1,0 +1,135 @@
+<ion-view view-title="{{evento.tipo}}" class="page-tabs">
+    <ion-content ng-class="{expanded:$scope.isExpanded}">
+        <div class="hero slide-up" style="background-image: url('{{evento.picture}}');">
+            <div class="content has-header">
+                    <h3>{{evento.name}}</h3>
+                </div>
+             </div>
+        </div>
+
+        <div class="animate-fade-in-slide">
+            <div ng-show="myModel.tab == 1">
+                <ion-list class="padding-horizontal">
+                        <ion-item class="item-avatar" ui-sref="app.curriculum({ chef_id: evento.owner_id })">
+                            <img ng-src="{{evento.owner_picture}}" class="avatar">
+                            <h4>Chef:</h4>
+                            <p>{{evento.owner_name}} <i class="ion-android-open"></i></p>
+                        </ion-item>
+                        <ion-item class="item-icon-left">
+                            <i class="icon ion-android-calendar"></i>
+                            <h4>Data do {{evento.tipo}}:</h4>
+                            <p>{{evento.start | formata_datetime}}</p>
+                        </ion-item>
+                        <ion-item class="item-icon-left">
+                            <i class="icon ion-cash"></i>
+                            <h4>Valor:</h4>
+                            <p>R${{evento.price | formatar_preco}}</p>
+                        </ion-item>
+                        <ion-item class="item-icon-left" ui-sref="app.event_map({ event_id: evento.event_id })">
+                            <i class="icon ion-ios-location"></i>
+                            <h4>Local:</h4>
+                            <p>{{evento.street}}, {{evento.neighborhood}} {{evento.state}} <i class="ion-android-open"></i></p>
+                        </ion-item>
+                        <ion-item class="item-icon-left">
+                            <i class="icon ion-ios-people"></i>
+                            <h4>Limite de Participantes:</h4>
+                            <p>Máximo de {{evento.num_users}} participantes</p>
+                        </ion-item>
+
+                        
+                        <div ng-repeat="category in evento.extra" class="card stable-bg ink ink-dark margin-bottom">
+                            <div class="card-item item-divider padding-horizontal">{{category.title}}</div>
+                            <ion-list class="dark">
+                                <ion-item ng-repeat="(info_title, info_value) in category.values">
+                                    <h3><strong>{{info_title}}</strong></h3>
+                                    <p>{{info_value}}</p>
+                                </ion-item>
+                            </ion-list>
+                        </div>
+                </ion-list>
+            </div>
+            
+            <div ng-show="myModel.tab == 2">
+                <h4 class="content padding double-padding-x">Convidados</h4>
+                <div class="padding text-center text-white" ng-show="loading">
+                    <p><ion-spinner></ion-spinner></p>
+                </div>
+
+                <div class="list" id="listaConvidados">
+                    <a ng-repeat="guest in evento.guests" ui-sref="app.event_detail({ event_id: evento.event_id })" class="item item-avatar">
+                    <img ng-src="{{guest.picture}}">
+                    <h2>{{guest.name}}</h2>
+                    <p ng-if="guest.status == 'confirmed'"><i class="icon ion-ios-checkmark assertive"></i></p>
+
+                    </a>
+                    
+                </div> 
+            
+            </div>
+
+            <div ng-show="myModel.tab == 3">
+                <h4 class="content padding double-padding-x">Fotos</h4>
+                <div class="padding text-center text-white" ng-show="loading">
+                    <p><ion-spinner></ion-spinner></p>
+                </div>
+                <div class="list">
+                    <a ng-repeat="foto in evento.pictures track by $index" class="item item-avatar item-icon-right"><div class="card dark-bg in"><img ng-src="{{foto}}"></div></a>
+                </div> 
+            </div>
+
+            <div ng-show="myModel.tab == 4">
+
+
+                <div class="padding text-center text-white" ng-show="loading">
+                    <p><ion-spinner></ion-spinner></p>
+                </div>
+
+                <div ng-if="evento.comments.length == 0">
+                    <div class="card">
+                        <div class="item item-text-wrap calm">
+                            Nenhum Comentário foi feito até o momento
+                        </div>
+                    </div>
+                </div>
+
+                <div class="list">
+                    <a ng-repeat="comentario in evento.comments"  class="item item-avatar item-text-warp">
+                        <img ng-src="{{comentario.picture}}">
+                        <h2>{{comentario.name}}</h2>
+                        <p>{{comentario.comment}}</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div ng-controller="EventConfirmCtrl as vm" ng-show="myModel.tab == 1">
+            <button id="fab-event_detail" ng-click="confirmPresensa()" class="button button-fab-bottom-right expanded button-energized-900 spin"><i class="icon ion-checkmark-round"></i></button>
+        </div>
+        <div ng-controller="EventInviteCtrl as vm" ng-show="myModel.tab == 2">
+            <button id="fab-event_invite" ng-click="convidaAmigos()" class="button button-fab-bottom-right expanded button-energized-900 spin"><i class="icon ion-android-add"></i></button>
+        </div>
+        <div ng-controller="EventCommentCtrl as vm" ng-show="myModel.tab == 4">
+            <button id="fab-event_comment" ng-click="writeComment()" class="button button-fab-bottom-right expanded button-energized-900 spin"><i class="icon ion-ios-compose-outline"></i></button>
+        </div>
+    </ion-content>
+
+    <ion-footer-bar>
+        <div class="tabs tabs-dark tabs-icon-top static">
+            <a href="" ng-click="changeTabs(1)" class="tab-item" ng-class="myModel.tab==1 ? 'active' : ''">
+                <i class="icon ion-ios-list-outline"></i> Informações
+            </a>
+            <a href="" ng-click="changeTabs(2)" class="tab-item" ng-class="myModel.tab==2 ? 'active' : ''">
+                <i class="icon ion-android-contacts"></i> Convidados
+            </a>
+            <a href="" ng-click="changeTabs(3)" class="tab-item" ng-class="myModel.tab==3 ? 'active' : ''">
+                <i class="icon ion-images"></i> Fotos
+            </a>
+            <a href="" ng-click="changeTabs(4)" class="tab-item" ng-class="myModel.tab==4 ? 'active' : ''">
+                <i class="icon ion-quote"></i> Comentários
+            </a>
+        </div>
+
+    </ion-footer-bar>
+</ion-view>
+
+

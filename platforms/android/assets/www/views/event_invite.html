@@ -1,0 +1,177 @@
+<ion-modal-view>
+    <ion-header-bar class="bar-positive" align-title="center">
+        <button class="button button-icon button-clear ion-close" ng-click="closeModal()"></button>
+        <h1 class="title">Convites Disponíveis: {{ConvitesDisponiveis}}</h1>
+
+    </ion-header-bar>
+
+    <div class="content has-header">
+               
+                <div class="button-bar" id="barra-convites">
+                    <button ng-click="mudaAbaConvite(1)" class="button button-dark waves-effect waves-button waves-classic">Amigos</button>
+                    <!-- <button style="padding-top:12px" ng-click="mudaAbaConvite(2)" class="button button-dark waves-effect waves-button waves-classic icon ion-email btn-convite"></button> -->
+                    <button style="padding-top:12px" class="button button-dark waves-effect waves-button waves-classic icon-left" ng-click="conviteMidias()">Externo</button>
+                </div>
+
+
+                <form id="formConvites" ng-show="abaConvite == 1" class="padding">
+
+                <h3>Selecione os amigos:</h3>
+
+                <div class="padding-top" ng-show="amigosParaConvidar.length > 0">
+
+                <ul class="list" id="listAmigos">
+
+                    <li class="item item-checkbox" ng-repeat="amigo in amigosParaConvidar">
+                       {{amigo.name}}
+                       <label class="checkbox">
+                        <input type="checkbox"  ng-click="verificaQuantidadeConvite($event)" name="amigos[]" value="{{amigo.user_id}}">
+                       </label>
+                    </li>
+
+                    
+                </ul>
+
+                <div class="padding-horizontal">
+                    <button class="button button-block button-balanced" ng-click="enviarConvites()">Enviar Convite</button>
+                </div>
+                
+
+                </div>
+                
+                <p ng-show="amigosParaConvidar.length == 0">Nenhum amigo disponível para esse evento</p>
+
+
+                </form>
+
+
+                <form id="convidarPorEmail" class="padding" ng-show="abaConvite == 2" >
+
+                    <h3>Convite por e-mail</h3>
+                    
+                    <p>Convide um amigo de fora do app para este evento, para enviar para varios amigos, digite o email separado por , ex:teste@teste.com.br,teste2@teste2.com.br</p>
+
+                    <label class="item item-input">
+                      <input type="email" name="email" placeholder="E-mail">
+                    </label>
+                    
+                    <div class="padding-horizontal">
+                        <button class="button button-block button-balanced" ng-click="enviarConvitesEmail2()">Enviar E-mails</button>
+                    </div>
+
+                </form>
+
+                <form id="convidarPorRedes" class="padding" ng-show="abaConvite == 3" >
+
+                    <h3>Convite Mídias</h3>
+
+                    <button class="button button-block button-positive waves-effect waves-button waves-light activated" ng-click="conviteMidias()">Clique aqui</button>
+                    
+
+                </form>
+
+             
+            </div>
+
+
+
+
+
+
+<!--     <ion-pane>
+           <ion-tabs class="tabs-positive tabs-top">
+
+         
+               <ion-tab title="Amigos" icon-on="ion-person-stalker"  >
+                   <ion-nav-view name="tab-tab1">
+                       <ion-content class="padding">
+                           <form id="formConvites" style="margin-top:10">
+
+                           <h3>Amigos no APP:</h3>
+
+                           <div class="padding-top" ng-show="amigosParaConvidar.length > 0">
+
+                           <ul class="list" id="listAmigos">
+
+                               <li class="item item-checkbox" ng-repeat="amigo in amigosParaConvidar">
+                                  {{amigo.name}}
+                                  <label class="checkbox">
+                                   <input type="checkbox"  ng-click="verificaQuantidadeConvite($event)" name="amigos[]" value="{{amigo.user_id}}">
+                                  </label>
+                               </li>
+
+                               
+                           </ul>
+
+                           <div class="padding-horizontal">
+                               <button class="button button-block button-balanced" ng-click="enviarConvites()">Enviar Convite</button>
+                           </div>
+                           
+
+                           </div>
+                           
+                           <p ng-show="amigosParaConvidar.length == 0">Nenhum amigo disponível para esse evento</p>
+
+
+                           </form>
+                       </ion-content>
+
+                   </ion-nav-view>
+               </ion-tab>
+
+
+    
+               <ion-tab title="E-mail" icon-on="ion-email"  >
+                   <ion-nav-view name="tab-tab2">
+                       <ion-content class="padding">
+                           <form id="convidarPorEmail" >
+
+                               <h3>Convite por e-mail</h3>
+                               
+                               <p>Convide um amigo de fora do app para este evento, para enviar para varios amigos, digite o email separado por , ex:teste@teste.com.br,teste2@teste2.com.br</p>
+
+                               <label class="item item-input">
+                                 <input type="email" name="email" placeholder="E-mail">
+                               </label>
+                               
+                               <div class="padding-horizontal">
+                                   <button class="button button-block button-balanced" ng-click="enviarConvitesEmail2()">Enviar E-mails</button>
+                               </div>
+
+                           </form>
+                       </ion-content>
+                   </ion-nav-view>
+               </ion-tab>
+
+               <ion-tab title="Midias" icon-on="ion-forward"  >
+                   <ion-nav-view name="tab-tab3">
+                       <ion-content class="padding">
+                           <form id="convidarPorRedes" >
+
+                               <h3>Convite Mídias</h3>
+
+                               <button class="button button-block button-positive waves-effect waves-button waves-light activated" ng-click="conviteMidias()">Clique aqui</button>
+                               
+
+                           </form>
+                       </ion-content>
+                   </ion-nav-view>
+               </ion-tab>
+           </ion-tabs>
+
+       </ion-pane>
+ -->
+
+
+
+
+
+
+
+
+
+  
+          
+
+
+</ion-modal-view>

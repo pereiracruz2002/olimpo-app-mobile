@@ -1,0 +1,42 @@
+<ion-view view-title="Perfil">
+    <ion-content ng-class="{expanded:$scope.isExpanded}">
+        <div class="hero slide-up" style="background-image: url('{{user.extra.cover}}');">
+            <div class="content">
+                <div class="avatar" style="background-image: url('{{user.picture}}');"></div>
+                <h2><a class="light">{{user.name}}</a></h2>
+            </div>
+        </div>
+        <div class="tabs tabs-dark tabs-icon-top static">
+            <a ui-sref="app.event_category" class="tab-item">
+                <i class="icon ion-email"></i> Eventos 
+            </a>
+            <a ui-sref="app.friends" class="tab-item">
+                <i class="icon ion-android-contacts"></i> Amigos
+            </a>
+            <a ui-sref="app.activity" class="tab-item">
+                <i class="icon ion-earth"></i> Notificações 
+            </a>
+        </div>
+        <div class="padding text-center text-white" ng-show="loading">
+            <p><ion-spinner></ion-spinner></p>
+        </div>
+        <div class="list animate-fade-slide-in-right" ng-repeat="evento_tipo in eventos">
+            <h4 class="content double-padding-x">{{evento_tipo.event_type}}</h4>
+            <div class="item card-item">
+                <div ng-repeat="evento in evento_tipo.events" ui-sref="app.event_detail({ event_id: evento.event_id })" class="card stable-bg ink ink-dark">
+                    <div class="item item-avatar item-text-wrap">
+                        <span class="avatar" style="background-image: url('{{evento.picture}}');"></span>
+                        <p><strong>{{evento.name}}</strong></p>
+                        <p>{{evento.description}}</p>
+                        <div class="card-footer text-right">
+                            <div class="pull-left">
+                                <i class="icon ion-calendar"></i> {{evento.data}} 
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

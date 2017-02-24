@@ -1,0 +1,26 @@
+<ion-view view-title="Login" align-title="left">
+    <ion-content style="background: url(img/login.jpg) center; background-size: cover;">
+        <div class="padding flat">
+            <div class="content">
+                <div class="app-icon"></div>
+            </div>
+        </div>
+        <form ng-submit="loginViaForm()" name="loginForm">
+            <div class="list">
+                <ion-md-input placeholder="Email" highlight-color="balanced" type="email" ng-model="formData.email" required></ion-md-input>
+                <ion-md-input placeholder="Senha" highlight-color="energized" type="password" ng-model="formData.password" required></ion-md-input>
+            </div>
+            <div class="padding">
+                <button type="submit" class="button button-full button-positive ink" ng-disabled="loginForm.$invalid">Login</button>
+                <div class="row">
+                    <div class="col-50">
+                        <button ng-click="preRegister()" class="button button-full button-assertive ink" type="button">Cadastre-se</button>
+                    </div>
+                    <div class="col-50">
+                        <button type="button" ng-click="facebookLogin()" class="button button-full icon-left ion-social-facebook button-positive-900">Facebook</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

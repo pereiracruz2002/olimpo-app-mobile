@@ -1,0 +1,23 @@
+<ion-view view-title="Cadastro">
+    <ion-content ng-class="{expanded:$scope.isExpanded}">
+        <form name="formRegister" ng-submit="registar()">
+            <div class="list"> 
+                <label class="item item-input item-floating-label"> 
+                    <span class="input-label">E-mail</span> 
+                    <input type="email" placeholder="Email" ng-model="formData.email" required> 
+                </label> 
+                <label class="item item-input item-floating-label"> 
+                    <span class="input-label">Nome</span> 
+                    <input type="text" placeholder="Nome" ng-model="formData.name" required autofocus> 
+                </label> 
+
+                <label class="item item-input item-floating-label"> 
+                    <span class="input-label">Senha</span> 
+                    <input type="password" placeholder="Senha" ng-model="formData.password" required> 
+                </label> 
+
+                <button type="submit" ng-disabled="formRegister.$invalid" class="button button-block button-calm ink" data-ink-color="#9DEAFF" data-ink-opacity="1"> Cadastre-se</button>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

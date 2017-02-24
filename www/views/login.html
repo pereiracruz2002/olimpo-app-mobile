@@ -1,0 +1,33 @@
+<ion-content class="assertive-bg login">
+    <div class="padding">
+        <div class="col-33 col-offset-33">
+            <img src="img/logo.png" class="full-image" />
+        </div>
+    </div>
+
+    <div class="col-80 col-offset-10">
+        <h4 class="text-center">SOU UM CONVIDADO</h4>
+        <form name="formLogin" ng-submit="loginViaForm()">
+            <div class="list">
+                <label class="item item-input">
+                  <input type="email" placeholder="Email" ng-model="formData.email" name="email" required>
+                </label>
+                <label class="item item-input">
+                  <input type="password" placeholder="Senha" ng-model="formData.password" name="password" required>
+                </label>
+                <a ui-sref="esqueci_senha" class="button button-block button-clear button-light button-small">Esqueceu sua senha?</a>
+                <button class="button button-block button-default button-small" ng-disabled="formLogin.$invalid">Login</button>
+            </div>
+        </form>
+        <a ui-sref="preregister()" class="button button-block button-dark">CADASTRE-SE com o código</a>
+        <div class="row">
+            <div class="col-50">
+                <a href="" class="button button-block button button-clear button-small button-light">Sou um chef</a>
+            </div>
+            <div class="col-50">
+                <a href="" class="button button-block button button-clear button-small button-light">Não possuo código</a>
+            </div>
+        </div>
+
+    </div>
+</ion-content>

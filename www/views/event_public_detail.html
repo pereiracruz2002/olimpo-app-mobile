@@ -1,0 +1,60 @@
+<ion-view view-title="{{name}} -{{local}}">
+    <ion-nav-bar class="bar-events-public">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+    </ion-nav-bar>
+
+    <ion-content>
+        <div class="row row_header">
+            <div class="col-80 col-offset-10">            
+                <div class="chef_events-header texto" align="center">
+                    <p class="detalhes_header">Entregue seu dispositivo para o caixa</p>
+                    <p class="detalhes_header">do estabelecimento</p>
+                    <p class="detalhes_header">Inserir o código</p>
+
+                    <img src="{{evento.picture}}" class="full-image">
+                    
+                    <div align="left">
+                        <p class="detalhes"><b>{{evento.name}}</b></p>
+                        {{evento.start}} -  {{evento.end}} - {{evento.neighborhood}} 
+                    </div>
+                </div>           
+            </div>
+        </div>
+        <div class="row row_bottom">
+            <div class="col-80 col-offset-10">            
+                <div class="chef_events-header texto" align="center">
+                    <p class="detalhes_footer text_footer">Promoções</p>
+                    <p class="detalhes_footer">Para clientes D4F o {{evento.name}} oferece</p>
+                    <p class="detalhes_footer">promoções exclusivas</p>
+                </div>
+                <div class="list">
+                   <a href="#" class="item lista_destaque"> <span class="badge badge-assertive ativo"> 1 </span> <span class="texto_destaque"> 1 Burguer + Refri = Batatinha </span> </a>
+                   <a href="#" class="item lista_destaque"> <span class="badge badge-assertive"> 2 </span> <span class="texto_destaque"> Compre 1 Buguer Ganhe Outro </span> </a>                   
+                </div>
+            </div>           
+        </div>
+        
+        
+            <!--<div class="row eventsss row_bottom">
+                <div class="col-80 col/offset-10">
+                    <div class="chef_events-footer texto" align="center">
+
+                        <p class="detalhes">Promoções</p>
+                        <p class="detalhes">Para clientes D4F o Burguer Lab oferece</p>
+                        <p class="detalhes">promoções exclusivas</p>
+                    </div>
+                    <div>
+
+                        <ul>
+                            <li>teste</li>
+                            <li>teste</li>
+                            <li>teste</li>
+                            <li>teste</li>
+                        </ul>
+                        
+                    </div>               
+                </div>            
+            </div>-->  
+    </ion-content>
+</ion-view>

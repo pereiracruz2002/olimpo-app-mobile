@@ -1,0 +1,48 @@
+<ion-view view-title="Eventos">
+    <ion-content ng-class="{expanded:isExpanded}" class="animate-fade-slide-in">
+
+        <div class="padding text-center text-white" ng-show="loading">
+            <p><ion-spinner></ion-spinner></p>
+        </div>
+        <div class="row">
+            <div class="list half">
+                <div ng-repeat="evento in lista_eventos.par" ui-sref="app.event_detail({ event_id: evento.event_id })" class="card card-gallery item item-text-wrap">
+                    <div class="ink dark-bg">
+                        <h2>{{evento.name}}</h2>
+                        <img class="full-image" ng-src="{{evento.picture}}">
+                    </div>
+                    <div class="item tabs tabs-secondary tabs-icon-left">
+                        <div class="tab-item stable-bg assertive">
+                            <i class="icon ion-ios-people"></i>
+                            {{evento.total_guests}}
+                        </div>
+                        <div class="tab-item stable-bg positive-900">
+                            <i class="icon ion-ios-checkmark"></i>
+                            {{evento.total_confirmed}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="list half">
+                <div ng-repeat="evento in lista_eventos.impar" ui-sref="app.event_detail({ event_id: evento.event_id })" class="card card-gallery item item-text-wrap">
+                    <div class="ink dark-bg">
+                        <h2>{{evento.name}}</h2>
+                        <img class="full-image" ng-src="{{evento.picture}}">
+                    </div>
+                    <div class="item tabs tabs-secondary tabs-icon-left">
+                        <div class="tab-item stable-bg assertive">
+                            <i class="icon ion-ios-people"></i>
+                            {{evento.total_guests}}
+                        </div>
+                        <div class="tab-item stable-bg positive-900">
+                            <i class="icon ion-ios-checkmark"></i>
+                            {{evento.total_confirmed}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
+
+

@@ -1,0 +1,18 @@
+<ion-view view-title="Notificações">
+    <ion-content >
+   
+        <div class="item card-item">
+            <div ng-repeat="notificacao in notificacoes" class="card stable-bg ink ink-dark">
+                <div class="item item-text-wrap">
+                    {{notificacao.text}}
+                    <div class="card-footer text-right">
+                        <div class="pull-left">
+                            <i class="icon ion-clock"></i> {{notificacao.data_formatada}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </ion-content>
+</ion-view>

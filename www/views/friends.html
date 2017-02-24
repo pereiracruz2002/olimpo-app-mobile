@@ -1,0 +1,39 @@
+<ion-view view-title="Minha rede de amigos">
+    <ion-nav-bar class="bar-dark">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+    </ion-nav-bar>
+
+    <ion-content class="friends">
+        <div class="list friends-header">
+            <h5 class="text-center"><strong>Aumente sua rede de amigos e aproveite</strong></h5>
+            <div class="row">
+                <div class="item item-text-wrap col-80">
+                    <p class="light">Convide amigos para fazer parte da sua rede D4F. <em>Apenas pessoas que ainda não tem.</em></p>
+                </div>
+                <div class="col-20 position-relative">
+                    <button class="button button-royal button-circle add_friend" ng-click="convidar()"><i class="icon ion-ios-plus-empty"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="list" ng-show="friends.length == 0">
+            <p style='text-align:center'>Nenhum amigo encontrado</p>
+        </div>
+
+        <div class="item text-center">
+            <h4>MINHA REDE DE AMIGOS</h4>
+            <p><strong>Seus amigos que já fazem parte da rede D4F</strong></p>
+        </div>
+
+        <div class="list">
+            <div ng-repeat="friend in friends" class="item item-avatar item-icon-right">
+                <img ng-src="{{friend.picture}}">
+                <div class="isChef" ng-if="friend.user_type_id == 2">
+                    <img src="img/chapeu-chef.png" width="16" height="16" />
+                </div>
+                <h2>{{friend.name}}</h2>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

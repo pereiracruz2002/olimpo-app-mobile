@@ -1,0 +1,12 @@
+<ion-view view-title="Configurações">
+    <ion-content>
+        <ion-list type="list-inset">
+            <ion-item class="item-divider">
+                Notificações
+            </ion-item>
+            <ion-toggle ng-model="notificacoes.invites" ng-change="setNotificacoes('invites')" toggle-class="toggle-balanced" ng-true-value="'1'" ng-false-value="'0'">Convites de novos eventos</ion-toggle> 
+            <ion-toggle ng-model="notificacoes.events_near" ng-change="setNotificacoes('events_near')" toggle-class="toggle-balanced" ng-true-value="'1'" ng-false-value="'0'">Lembrete de evento próximo</ion-toggle> 
+            <ion-toggle ng-model="notificacoes.friends" ng-change="setNotificacoes('friends')" toggle-class="toggle-balanced" ng-true-value="'1'" ng-false-value="'0'">Novas amizades</ion-toggle> 
+        </ion-list>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,60 @@
+<ion-view view-title="">
+    <ion-nav-bar class="bar-events-public">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+    </ion-nav-bar>
+   
+    <ion-content>
+        <div class="list events_public_header">
+            <div class="item item-input-inset">
+                <div class="col-50 col-offset-25">
+                    <label class="item-input-wrapper">
+                         <input ion-autocomplete type="text" readonly="readonly" class="ion-autocomplete" autocomplete="off" ng-model="formData.city" item-view-value-key="formatted_address" items-method="getAddressSuggestions(query)" placeholder="Cidade, UF" max-selected-items="1" cancel-label="Cancelar" select-items-label="Selecione uma cidade" />
+                    </label>
+                </div>
+            </div>
+        </div>
+		<div id="tabs-event-public">
+			<div class="tabs tabs-icon-only tabs-evento">
+	            <a class="tab-item" href="" ng-click="myModel.tab=1" ng-class="myModel.tab==1 ? 'assertive active' : ''">Lista</a>
+	            <a class="tab-item" href="" ng-click="myModel.tab=2" ng-class="myModel.tab==2 ? 'assertive active' : ''">Mapas</i></a>
+	        </div>
+	    </div>
+
+        <div ng-show="myModel.tab==1" id="lista">
+
+        	<div class="col-100 ">
+				<div class="card eventos_publicos"  ng-if="eventos[0].qtd == 0">
+            		<div class="item item-text-wrap assertive">
+                		<p>APROVEITE as sugestões de eventos públicos que Dinner 4 Friends selecionou para você!</p>
+                		
+            		</div>
+            		<div class="item item-text-wrap assertive">
+						<p>Você encontra eventos em diversas categorias ao seu redor, dentre eles, <b>Food Trucks, Quermesses, Eventos beneficientes.</b> Incluindo cartões fidelidades e promoções exclusivas e muito mais...</p>
+            		</div>
+            		<div class="item item-text-wrap assertive">
+						<p>Comece preenhcendo a sua localização atual no espaço acima</p>
+            		</div>
+				</div>
+        	</div>
+			<div class="col-80 col-offset-10">
+				
+				
+	            <ion-list ng-if="eventos[0].qtd > 0" class="list-category list-category-events-public">
+	                <ion-item ng-repeat="evento in eventos" class="item-avatar" ui-sref="tab.lista_evento_public({event_id:evento.event_type_id})">
+	                    <img src="{{evento.image_type}}">
+	                    <h2>{{evento.name}}</h2>
+	                    <div class="total_eventos"><span>{{evento.qtd}}</span> Eventos</div>  
+	                </ion-item>
+	            </ion-list>
+	        </div>
+	    </div>
+	    <div ng-show="myModel.tab==2" id="mapa">
+			<div class="col-80 col-offset-10">
+	            <ion-content>
+      				<div id="map" data-tap-disabled="true"></div>
+    			</ion-content>
+	        </div>
+	    </div>
+    </ion-content>
+</ion-view>

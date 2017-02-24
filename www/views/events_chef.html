@@ -1,0 +1,35 @@
+<ion-view view-title="Dinner 4 Friends">
+    <ion-nav-bar class="bar-dark">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+    </ion-nav-bar>
+   
+    <ion-content>
+        <div class="list events_chef-header">
+            <h5 class="text-center"><strong>Digite aqui o código de um novo convite:</strong></h5>
+            <div class="item item-input-inset">
+                <div class="col-50 col-offset-25">
+                    <label class="item-input-wrapper">
+                        <input type="text" placeholder="Código">
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="col-67 col-offset-20 subheader">
+            <h4 class="text-center">
+                Eventos os quais você foi convidado por um <em>amigo-chef.</em>
+            </h4>
+        </div>
+
+        <div class="col-80 col-offset-10">
+            <ion-list class="list-category">
+            <ion-item class="item-avatar" ng-repeat="evento in eventos" ui-sref="tab.chef_events({user_id: evento.owner_id})">
+                <img ng-src="{{evento.owner_picture}}">
+                    <h2>{{evento.owner_name}}</h2>
+                    <div class="total_eventos"><span>2</span> Eventos</div>
+                    <p class="info"><i class="icon ion-ios-information assertive"></i></p>
+                </ion-item>
+            </ion-list>
+        </div>
+    </ion-content>
+</ion-view>
